@@ -1,0 +1,193 @@
+/* =
+====================================
+RESET
+====================================
+= */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* =
+====================================
+RESET
+====================================
+= */
+
+:root {
+    --color-bright-orange: hsl(31, 77%, 52%);
+    --color-dark-cyan: hsl(184, 100%, 22%);
+    --color-very-dark-cyan: hsl(179, 100%, 13%);
+
+    --color-1: hsla(0, 0%, 100%, 0.75);
+    --color-2: hsl(0, 0%, 95%);
+
+    --font-1: 'Lexend Deca', sans-serif;
+    --font-2: 'Big Shoulders Display', cursive;
+}
+
+html, * {
+    font-family: var(--font-1);
+    font-size: 15px;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 5rem 2rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    padding: 3rem;
+    flex: 1 1 0;
+}
+
+.card:first-of-type {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card:last-of-type {
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-family: var(--font-2);
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+
+.card-description {
+    color: var(--color-1);
+    line-height: 1.75;
+    margin-top: 2rem;
+}
+
+.card-button {
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 3rem;
+    padding: 0.7rem 1.8rem;
+    margin-top: 2rem;
+}
+
+.card-button:hover {
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.bg-bright-orange {
+    background-color: var(--color-bright-orange);
+}
+
+.bg-dark-cyan {
+    background-color: var(--color-dark-cyan);
+}
+
+.bg-very-dark-cyan {
+    background-color: var(--color-very-dark-cyan);
+}
+
+.font-color-bright-orange {
+    color: var(--color-bright-orange);
+}
+
+.font-color-dark-cyan {
+    color: var(--color-dark-cyan);
+}
+
+.font-color-very-dark-cyan {
+    color: var(--color-very-dark-cyan);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: hsl(0, 0%, 0%);
+    padding: 1rem 0;
+    line-height: 1.5;
+  }
+
+  .attribution a {
+    color: var(--color-dark-cyan);
+    text-decoration: none;
+  }
+
+@media screen and (min-width: 768px) {
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .cards-container {
+        flex-direction: row;
+        max-width: 900px;
+    }
+
+    .card:first-of-type {
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+    
+    .card:last-of-type {
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    .card-button {
+        margin-top: 5rem;
+    }
+    
+}
