@@ -80,6 +80,7 @@ html, * {
 
 body {
     padding: 5rem 2rem;
+    background-color: var(--color-2);
 }
 
 .cards-container {
